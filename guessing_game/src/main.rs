@@ -22,13 +22,13 @@ fn main() {
             Err(_) => continue,
         };
     
-        println!("You guessed: {guess}");
+        println!("Jij hebt {guess} geraden.");
     
         match guess.cmp(&secret_number) {
-            Ordering::Less => println!("too small!"),
-            Ordering::Greater => println!("too big!"),
+            Ordering::Less => println!("te klein!"),
+            Ordering::Greater => println!("te groot!"),
             Ordering::Equal => {
-                println!("you win!");
+                println!("Jij wint!");
                 break;
             }
         }
